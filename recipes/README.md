@@ -1,13 +1,11 @@
 # Recipes
 
-These are recipes for bevy game engine.
-
+These are recipes for bevy game engine.<br />
 I just made them for fun and for learning, so I will not assure the codes work properly.
 
 ## How to run
 
-First, search for the recipe path you want to run in `Cargo.toml` file.
-
+First, search for the recipe path you want to run in `Cargo.toml` file.<br />
 And replace the name of the recipe in the following commands.
 
 ```sh
