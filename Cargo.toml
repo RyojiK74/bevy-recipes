@@ -12,3 +12,7 @@ bevy = "0.10.0"
 name = "hello_world"
 path = "recipes/hello_world.rs"
 
+[[bin]]
+name = "init_window"
+path = "recipes/window_manipulation/init_window.rs"
+
