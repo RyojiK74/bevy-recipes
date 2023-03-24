@@ -1,17 +1,18 @@
-use bevy::{prelude::*, window::WindowResolution};
+use bevy::prelude::*;
+
+pub const WINDOW_WIDTH: f32 = 800.;
+pub const WINDOW_HEIGHT: f32 = 600.;
 
 fn main() {
     App::new()
-        .add_plugins(DefaultPlugins)
-        .add_startup_system(init_window)
+        .add_plugins(DefaultPlugins.set(WindowPlugin {
+            primary_window: Some(Window {
+                title: "New window!!".into(),
+                resolution: (WINDOW_WIDTH, WINDOW_HEIGHT).into(),
+                resizable: false,
+                ..default()
+            }),
+            ..default()
+        }))
         .run();
-}
-
-fn init_window(mut window: Query<&mut Window>) {
-    let Ok(mut window) = window.get_single_mut() else {
-        return;
-    };
-
-    window.title = "NEW WINDOW IS OPENING".to_string();
-    window.resolution = WindowResolution::new(1980., 1200.);
 }
