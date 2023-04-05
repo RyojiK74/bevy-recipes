@@ -16,3 +16,6 @@ path = "recipes/hello_world.rs"
 name = "init_window"
 path = "recipes/window_manipulation/init_window.rs"
 
+[[bin]]
+name = "appearing_texts"
+path = "recipes/texts/appearing_texts.rs"
